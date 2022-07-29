@@ -8,17 +8,18 @@ Read the file, print the content (parse data to a 3 objects tuple
 from each line, create list which include all tuple.
 """
 FILE_INPUT_NAME = "cs521_3_5_input.txt"
-with open(FILE_INPUT_NAME, "r") as file:
+with open(FILE_INPUT_NAME, "r") as file: # open file with read mode
     students_record_lst = []
-    for line in file:
+    for line in file: # loop through file
+        # create list 
         line_read = line.strip()
         line_lst = line_read.split(",")
         line_lst[0] = str(line_lst[0].strip())
         line_lst[1] = int(line_lst[1])
         line_lst[2] = float(line_lst[2])
-        line_tuple = tuple(line_lst)
-        students_record_lst.append(line_tuple)
-    print(f"Student Records: {students_record_lst}")
+        line_tuple = tuple(line_lst) # convert list to tuple
+        students_record_lst.append(line_tuple) # append tuple to student record list list
+    print(f"Student Records: {students_record_lst}") # print result
 
     
  

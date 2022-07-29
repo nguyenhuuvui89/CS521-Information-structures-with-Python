@@ -6,13 +6,12 @@ Homework Problem # 3_4
 Description of Problem (1-2 sentence summary in your own words):
 Read, write file and error handling
 """
-import os
 # assign input and output file name to variable
 FILE_INPUT_NAME = "cs521_3_4_input.txt" 
 FILE_OUTPUT_NAME = "cs521_3_4_output.txt"
 WORDS_LIMIT = 20
 WORDS_PER_LINE = 5
-if os.path.isfile(FILE_INPUT_NAME) == True: # check if file exist
+try: 
     input_file = open(FILE_INPUT_NAME, "r") # open file read mode
     output_file = open(FILE_OUTPUT_NAME, "w") # open file write mode
     read_line = input_file.readline().strip() # read and strip the line
@@ -28,10 +27,8 @@ if os.path.isfile(FILE_INPUT_NAME) == True: # check if file exist
     else:
         print("Error: The file has a different number of words.")   
     input_file.close()
-    output_file.close()     
-else:
+    output_file.close()          
+except FileNotFoundError:
     print("Error: file is missing") # print error if file input missing
-
-   
 
 
