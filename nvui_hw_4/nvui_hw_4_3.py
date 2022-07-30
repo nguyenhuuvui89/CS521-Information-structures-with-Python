@@ -1,3 +1,11 @@
+"""
+Vincent Nguyen
+Class: CS 521 - Summer 2
+Date: Jul 29
+Homework Problem # 4_3
+Description of Problem (1-2 sentence summary in your own words):
+
+"""
 FIRST_NAME = ["Jane", "John"]
 LAST_NAME = ["Doe", "Deer", "Black"]
 

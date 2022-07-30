@@ -1,9 +1,16 @@
+"""
+Vincent Nguyen
+Class: CS 521 - Summer 2
+Date: Jul 29
+Homework Problem # 4_2
+Description of Problem (1-2 sentence summary in your own words):
 
+"""
 FIRST_SEN = '"WAS IT A RAT I SAW?"'
 SEC_SEN = "Wwwas it a rat I saw?"
 tmplt_out_1 = "The string being analyzed is: {}"
 tmplt_out_2 = "1. Dictionary of letter counts: {}"
-templt_out_3 = '2. Most frequent letter "{0}" appears {1} times.'
+tmplt_out_3 = '2. Most frequent letter "{0}" appears {1} times.'
 templt_out_4 = '2. Most frequent letter {0} appears {1} times.'
 
 string_1 = {letter: FIRST_SEN.count(letter) for letter in FIRST_SEN if letter.isalpha()}
@@ -14,17 +21,15 @@ max_value = max(string_1.values())
 
 print(tmplt_out_1.format(FIRST_SEN))
 print(tmplt_out_2.format(dict(sorted(string_1.items()))))
-print(templt_out_3.format(max_key,max_value))
+print(tmplt_out_3.format(max_key, max_value))
 
-
+print()
+# sentence no.2
 string_2 = {letter_2 : SEC_SEN.upper().count(letter_2) for letter_2 in SEC_SEN.upper() if letter_2.isalpha()}
 sorted_dict_2 = {key_2 : string_2[key_2] for key_2 in sorted(string_2.keys())}
 max_value_2 = max(string_2.values())
 
-freq_lst = []
-for i in string_2:
-    if string_2[i] == max_value_2:
-        freq_lst.append(i)
+freq_lst = [i for i in string_2 if string_2[i] == max_value_2]
 
 print(tmplt_out_1.format(SEC_SEN))
 print(tmplt_out_2.format(sorted_dict_2))

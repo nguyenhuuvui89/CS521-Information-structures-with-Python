@@ -1,3 +1,11 @@
+"""
+Vincent Nguyen
+Class: CS 521 - Summer 2
+Date: Jul 29
+Homework Problem # 4_4
+Description of Problem (1-2 sentence summary in your own words):
+
+"""
 MY_DICT = {"a": 15, "c": 18, "b": 20}
 # create list of keys and list of values
 dict_keys = list(MY_DICT.keys())
